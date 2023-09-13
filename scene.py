@@ -61,6 +61,7 @@ class Scene:
         #Get shop data from class property variable and then get the names
         shops = self.properties["shops"]
 
+        #Get shop names
         shops_names = [x["name"] for x in shops]
     def add_shop(self,shop):
 
