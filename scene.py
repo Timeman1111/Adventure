@@ -1,5 +1,22 @@
 
 
+class Shop:
+    def __init__(self,shop_name,products = []):
+        self.name = shop_name
+        self.products = products
+
+    def add_product(self,product):
+        self.products.append(product)
+        return True
+    
+    def remove_product(self,product_index):
+        try:
+            del self.products[product_index]
+        except IndexError:
+            return False
+        else:
+            return True
+
 
 class Scene:
     def __init__(self,properties={},trace = None):
