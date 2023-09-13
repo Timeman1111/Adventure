@@ -43,7 +43,10 @@ class Scene:
         
         self.trace = trace
         self.properties = properties
-
+        try:
+          self.properties['shops']
+        except:
+          self.properties['shops'] = []
     def set_location_text(self,text):
         #Set scene location text
 
@@ -56,7 +59,7 @@ class Scene:
     def get_scene(self):
 
         # Get location setting from class property variable
-        location_setting = self.properties["location_setting_text"]
+        location_setting = self.properties["location_settingxw_text"]
 
         #Get shop data from class property variable and then get the names
         shops = self.properties["shops"]
@@ -70,3 +73,4 @@ class Scene:
 
         return True
 Library = Scene()
+

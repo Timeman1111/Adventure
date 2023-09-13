@@ -1,7 +1,6 @@
 import time
 import os
 import colorama
-import scene as *
+import scene
 
-
-
+print("HELLO")
