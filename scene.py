@@ -58,18 +58,22 @@ class Shop:
     for item in self.products:
       #Get product information
 
-      item_name = item.name
+      try:
+        item_name = item.name
 
-      item_cost = item.cost
+        item_cost = item.cost
 
-      item_rarity = item.rarity
+        item_rarity = item.rarity
 
-      item_type = item.type
+        item_type = item.type
 
-      item_properties = item.properties
+        item_properties = item.properties
 
-      #Add item info to products
-      products[item_name] = {'cost': item_cost, 'rarity' : item_rarity, 'item_type': item_type, 'item_properties': item_properties}
+        products[item_name] = {'cost': item_cost, 'rarity' : item_rarity, 'item_type': item_type, 'item_properties': item_properties}
+
+      except:
+        print("ERROR ITEM DOESN'T HAVE PARAMETER")
+        return False
 
     return products
 
