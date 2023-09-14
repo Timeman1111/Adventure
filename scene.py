@@ -49,6 +49,29 @@ class Shop:
 
       #Return True otherwise
       return True
+    
+  def get_items(self):
+    # Return items and their properties
+
+    products = {}
+
+    for item in self.products:
+      #Get product information
+
+      item_name = item.name
+
+      item_cost = item.cost
+
+      item_rarity = item.rarity
+
+      item_type = item.type
+
+      item_properties = item.properties
+
+      #Add item info to products
+      products[item_name] = {'cost': item_cost, 'rarity' : item_rarity, 'item_type': item_type, 'item_properties': item_properties}
+
+    return products
 
 
 #Main Scene Class variable
