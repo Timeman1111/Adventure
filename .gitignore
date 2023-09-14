@@ -1,1 +1,6 @@
 **/poetry.lock
+**/.replit
+**/pyproject.toml
+**/replix.nix
+**/.vscode
+**/.gitattributes
