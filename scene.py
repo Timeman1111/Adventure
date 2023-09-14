@@ -1,9 +1,11 @@
 class Shop:
 
-  def __init__(self, shop_name, products=[]):
+  def __init__(self, shop_name,shop_owner,description, products=[]):
     #Initalize shop class
 
     self.name = shop_name
+    self.owner = shop_owner
+    self.description = description
 
     #Check and fix products incase only one object is used.
     if type(products) != list:
