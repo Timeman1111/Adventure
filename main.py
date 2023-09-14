@@ -1,9 +1,7 @@
 import time
 import os
 import colorama
-import scene
-import npc
-
+import pickle
 
 
 
@@ -29,7 +27,31 @@ class Player:
             }
 
 class Game:
+
     def __init__(self,player):
+
         self.player = player
+
+        self.scenes = {}
+
+    def load_scene(self,scene):
+        #Load scene from pre-pickled file of Scene type
+
+        f = open(scene,'rb')
+
+        scene = pickle.load(f)
+
+
+        #Close out file object
+        f.close()
+
+
+        #add it to scene
+        self.scenes[scene.name] = scene
+
+        return True
+
+    def start_game(self):
+        print(self.scenes)
 
 

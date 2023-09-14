@@ -84,17 +84,25 @@ class Shop:
     return products
 
 
+
 #Main Scene Class variable
 class Scene:
 
-  def __init__(self, properties={}, trace=None):
+  def __init__(self, name, properties={}, trace=None):
     # Initalize Scene and set class variables
 
+    self.name = name
+
     self.trace = trace
+
     self.properties = properties
+
     try:
+
       self.properties['shops']
+
     except:
+      
       self.properties['shops'] = []
 
   def set_location_text(self, text):
