@@ -1,0 +1,35 @@
+{
+
+
+    "1": {
+        "line": "Hello there, what can I help you with?",
+        "options":
+        [
+
+            ["Nothing", "end"],
+
+            ["I was wondering what you could tell me about this place", 2],
+
+            ["What is the currency around here?",3]
+
+        ] 
+    },
+
+    "2": {
+        "line": "This is Koya Kingdom. Long live the king!",
+        "options":[
+
+            ["Um, okay thanks","end"],
+
+            ["What king?",4],
+
+            ["Where is the king?",5]
+        ]
+    }
+
+
+
+
+
+
+}
