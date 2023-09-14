@@ -5,7 +5,13 @@ class Shop:
 
     self.name = shop_name
 
-    self.products = products
+    #Check and fix products incase only one object is used.
+    if type(products) != list:
+
+      self.products = []
+      
+      self.products.append(products)
+    
 
   def add_product(self, product):
     #Add single product item to shop category if item is a dictonary
@@ -19,7 +25,16 @@ class Shop:
 
     #Return true
     return True
+  
+  def add_products(self,products):
+    #Add multiple products to shop using list or otherwise.
+    if type(products) == list:
 
+      self.products.extend(products)
+
+    else:
+      return False
+    
   def remove_product(self, product_index):
 
     #Remove item from the product list
@@ -36,6 +51,7 @@ class Shop:
       return True
 
 
+#Main Scene Class variable
 class Scene:
 
   def __init__(self, properties={}, trace=None):
@@ -72,6 +88,3 @@ class Scene:
     self.properties["shops"].append(shop)
 
     return True
-
-
-Library = Scene()
