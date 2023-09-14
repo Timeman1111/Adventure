@@ -1,6 +1,6 @@
 class Shop:
 
-  def __init__(self, shop_name,shop_owner,description, products=[]):
+  def __init__(self, shop_name, shop_owner, description, products=[]):
     #Initalize shop class
 
     self.name = shop_name
@@ -11,9 +11,8 @@ class Shop:
     if type(products) != list:
 
       self.products = []
-      
+
       self.products.append(products)
-    
 
   def add_product(self, product):
     #Add single product item to shop category if item is a dictonary
@@ -27,8 +26,8 @@ class Shop:
 
     #Return true
     return True
-  
-  def add_products(self,products):
+
+  def add_products(self, products):
     #Add multiple products to shop using list or otherwise.
     if type(products) == list:
 
@@ -36,7 +35,7 @@ class Shop:
 
     else:
       return False
-    
+
   def remove_product(self, product_index):
 
     #Remove item from the product list
@@ -51,7 +50,7 @@ class Shop:
 
       #Return True otherwise
       return True
-    
+
   def get_items(self):
     # Return items and their properties
 
@@ -71,9 +70,14 @@ class Shop:
 
         item_properties = item.properties
 
-        products[item_name] = {'cost': item_cost, 'rarity' : item_rarity, 'item_type': item_type, 'item_properties': item_properties}
+        products[item_name] = {
+            'cost': item_cost,
+            'rarity': item_rarity,
+            'item_type': item_type,
+            'item_properties': item_properties
+        }
 
-      except:
+      except Exception as e:
         print("ERROR ITEM DOESN'T HAVE PARAMETER")
         return False
 
@@ -109,7 +113,7 @@ class Scene:
     shops = self.properties["shops"]
 
     #Get shop names
-    shops_names = [x["name"] for x in shops]
+    shops_names = [shop.name for shop in shops]
 
   def add_shop(self, shop):
 
