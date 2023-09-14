@@ -105,7 +105,10 @@ class Scene:
     return True
 
   def get_scene(self):
+    #Return scene to game
 
+    scene = {}
+    
     # Get location setting from class property variable
     location_setting = self.properties["location_setting_text"]
 
@@ -115,9 +118,20 @@ class Scene:
     #Get shop names
     shops_names = [shop.name for shop in shops]
 
+    scene = {
+      
+      "location_setting": location_setting,
+      "shops" : shops_names,
+      "end":True
+      
+    }
+    return scene
   def add_shop(self, shop):
 
     #Add shop to scene
     self.properties["shops"].append(shop)
 
     return True
+
+
+Joe_Blacksmith = Shop("Joe's blacksmith", "Joe", '')
