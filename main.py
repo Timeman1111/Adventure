@@ -5,7 +5,7 @@ import pickle
 
 
 
-
+#Player Class
 class Player:
     def __init__(self):
         #Initalize the player starting stats
