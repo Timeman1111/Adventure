@@ -2,13 +2,20 @@ import time
 import os
 import colorama
 import pickle
+from game_functions import *
 
+clear()
 
 
 #Player Class
 class Player:
     def __init__(self):
         #Initalize the player starting stats
+
+        self.name = None
+
+        self.tutorial = True
+
         self.companions = {}
 
         self.inventory = {}
@@ -51,7 +58,41 @@ class Game:
 
         return True
 
+
+    def request_name(self):
+        while True:
+            user = input("NAME: ")
+
+            try: 
+                int(user)
+                scrollTxt('\nTry Again!')
+                continue
+            except:
+                self.player.name = user
+
+                return
+
+
+    def tutorial(self):
+
+        scrollTxt('Hello\n\n',0.045)
+
+        scrollTxt('This is a quick tutorial on how to play the game!\n\n',delay = 0.045)
+
+        scrollTxt('What is your name?',delay = 0.045)
+
+        self.request_name()
+
+        scrollTxt(f'Thanks {self.player.name}')
+
+
     def start_game(self):
-        print(self.scenes)
+
+        if self.player.tutorial == True:
+
+            self.tutorial()
 
 
+game = Game(Player())
+
+game.start_game()
