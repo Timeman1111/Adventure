@@ -9,10 +9,10 @@ class Shop:
 
     #Check and fix products incase only one object is used.
     if type(products) != list:
-
       self.products = []
-
       self.products.append(products)
+    else:
+      self.products = products if products else []
 
   def add_product(self, product):
     #Add single product item to shop category if item is a dictonary

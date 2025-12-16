@@ -1,0 +1,27 @@
+{
+    "1": {
+        "line": "Hello traveler! Looking for some supplies for your journey?",
+        "options": [
+            ["Yes, show me what you have", "shop"],
+            ["Tell me about this town", 2],
+            ["No thanks", "end"]
+        ]
+    },
+
+    "2": {
+        "line": "Koya Kingdom is a peaceful place, though lately there have been reports of monsters in the forest to the east.",
+        "options": [
+            ["Monsters? Tell me more", 3],
+            ["I see. Can I see your shop?", "shop"],
+            ["Thanks for the warning", "end"]
+        ]
+    },
+
+    "3": {
+        "line": "Yes, travelers have spotted goblins, wolves, and even orcs! Be careful if you venture there.",
+        "options": [
+            ["I'll be careful. Show me your shop", "shop"],
+            ["Thanks for the information", "end"]
+        ]
+    }
+}

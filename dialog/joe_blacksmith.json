@@ -1,0 +1,18 @@
+{
+    "1": {
+        "line": "Welcome to my smithy! Best weapons and armor in all of Koya Kingdom!",
+        "options": [
+            ["I'd like to see your wares", "shop"],
+            ["Tell me about your craft", 2],
+            ["Goodbye", "end"]
+        ]
+    },
+
+    "2": {
+        "line": "I've been smithing for over 30 years. Every blade I forge is a piece of art!",
+        "options": [
+            ["Impressive! Can I see your shop?", "shop"],
+            ["I'll come back later", "end"]
+        ]
+    }
+}

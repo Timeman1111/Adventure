@@ -1,0 +1,27 @@
+{
+    "1": {
+        "line": "Greetings, brave adventurer. I am Elder Marcus, leader of this village.",
+        "options": [
+            ["Hello, Elder. How can I help?", 2],
+            ["Tell me about the kingdom", 3],
+            ["Farewell", "end"]
+        ]
+    },
+
+    "2": {
+        "line": "Our village has been plagued by monsters recently. If you could help clear them out, I would reward you handsomely.",
+        "options": [
+            ["I'll help you!", "quest_accept"],
+            ["Tell me more about the kingdom first", 3],
+            ["Maybe later", "end"]
+        ]
+    },
+
+    "3": {
+        "line": "Koya Kingdom has stood for 500 years, but these are troubled times. The monster attacks grow more frequent each day.",
+        "options": [
+            ["I want to help with the monster problem", 2],
+            ["Interesting history", "end"]
+        ]
+    }
+}
