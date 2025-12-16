@@ -4,3 +4,6 @@
 **/replix.nix
 **/.vscode
 **/.gitattributes
+**/__pycache__
+*.pyc
+*.pyo
